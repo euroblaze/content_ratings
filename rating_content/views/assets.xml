@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <template id="assets_frontend" inherit_id="web.assets_frontend">
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" href="/rating_content/static/src/scss/rating.scss"/>
+            </xpath>
+            <xpath expr="//script[last()]" position="after">
+                <script type="text/javascript" src="/rating_content/static/src/js/rating.js"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

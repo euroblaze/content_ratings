@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="website_page_list_view_rating_inherit" model="ir.ui.view">
+            <field name="name">website.page.list.view.rating.inherit</field>
+            <field name="model">website.page</field>
+            <field name="inherit_id" ref="website.website_pages_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[last()]" position="after">
+                    <field name="rating_count"/>
+                    <field name="rating_percentage"/>
+                    <field name="rating" widget="priority"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

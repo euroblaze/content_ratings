@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <template id="page_rating" name="Page Rating">
+            <section class="s_references bg-gray-lighter page_rating">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12 rating-page-block">
+                            <div role="radiogroup"
+                                 class="o_priority o_field_widget priority_custom_widget"
+                                 aria-label="Rating">
+                                <input value="0"
+                                       class="d-none"/>
+                                <a role="radio" aria-checked="false" title="Very Dissatisfied"
+                                   aria-label="Very Dissatisfied" tabindex="-1" data-index="1"
+                                   class="o_priority_star fa fa-star-o task-rating"/>
+                                <a role="radio" aria-checked="false" title="Dissatisfied"
+                                   aria-label="Dissatisfied" tabindex="-1" data-index="2"
+                                   class="o_priority_star fa fa-star-o task-rating"/>
+                                <a role="radio" aria-checked="false" title="Fair"
+                                   aria-label="Fair" tabindex="-1" data-index="3"
+                                   class="o_priority_star fa fa-star-o task-rating"/>
+                                <a role="radio" aria-checked="false" title="Satisfied"
+                                   aria-label="Satisfied" tabindex="-1" data-index="4"
+                                   class="o_priority_star fa fa-star-o task-rating"/>
+                                <a role="radio" aria-checked="false" title="Very Satisfied"
+                                   aria-label="Very Satisfied" tabindex="-1" data-index="5"
+                                   class="o_priority_star fa fa-star-o task-rating"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="custom_snippets_template" name="Custom snippet template" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="inside">
+                <div class="o_panel_body">
+                    <t t-snippet="rating_content.page_rating" t-thumbnail="/rating_content/static/images/rating.jpg"/>
+                </div>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>
